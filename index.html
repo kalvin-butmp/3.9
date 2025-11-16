@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoFounder's & Recherche Avancée</title>
+
+  <!-- Police moderne -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ---------- STYLE GLOBAL ---------- */
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
+
+    /* ---------- EN-TÊTE ---------- */
+    header {
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+      padding: 8px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: relative;
+      z-index: 10;
+      min-height: 80px;
+    }
+    .logo img { height: 100px; width: auto; display: block; object-fit: contain; }
+    .nav-right { display: flex; align-items: center; gap: 25px; }
+    .social-icons { display: flex; gap: 15px; align-items: center; }
+    .social-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent; border-radius: 8px; padding: 5px; }
+    .social-icon:hover { border-color: #ffffff; background-color: rgba(255,255,255,0.3); transform: translateY(-2px); }
+
+    .nav-button { padding: 8px 16px; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent; border-radius: 8px; font-size: 15px; font-weight: 500; color: #0369a1; background-color: transparent; }
+    .nav-button:hover { border-color: #ffffff; background-color: rgba(255,255,255,0.5); transform: translateY(-2px); }
+
+    /* ---------- CONTENU PRINCIPAL PAGE 1 ---------- */
+    main {
+      position: relative;
+      padding: 120px 20px 120px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      overflow: visible;
+      z-index: 2;
+      background: linear-gradient(to bottom, #ffffff 0%, #f1f5f9 100%);
+    }
+
+    #main-title { 
+      color: #0369a1; 
+      font-size: clamp(40px, 7vw, 70px); 
+      font-weight: 900; 
+      margin-top: 40px; 
+      margin-bottom: 30px; 
+      line-height: 1.05; 
+      letter-spacing: -1px; 
+      position: relative; 
+      z-index: 3; 
+      animation: fadeInUp 1s ease forwards; 
+      opacity: 0; 
+    }
+
+    #main-description { 
+      color: #1f2937; 
+      font-size: 22px; 
+      line-height: 1.8; 
+      max-width: 900px; 
+      position: relative; 
+      z-index: 3; 
+      animation: fadeInUp 1.3s ease forwards; 
+      opacity: 0; 
+    }
+
+    .discover-button { 
+      margin-top: 60px; 
+      background-color: #22c55e; 
+      color: white; 
+      border: 2px solid #22c55e; 
+      padding: 12px 32px; 
+      font-size: 18px; 
+      font-weight: 600; 
+      border-radius: 10px; 
+      cursor: pointer; 
+      position: relative; 
+      z-index: 3; 
+    }
+
+    #subtext { 
+      margin-top: 25px; 
+      font-size: 20px; 
+      color: #374151; 
+      position: relative; 
+      z-index: 3; 
+      font-weight: 500; 
+      animation: fadeInUp 1.9s ease forwards; 
+      opacity: 0; 
+    }
+
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ---------- CALQUE DE FORMES BLEUES ---------- */
+    .shapes-container { position: absolute; top: 0; left: 0; width: 100%; height: calc(100vh - 10px); overflow: hidden; z-index: 1; pointer-events: none; }
+    .shape { position: absolute; opacity: 0.15; will-change: transform; filter: blur(2px); }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      header { flex-direction: column; gap: 10px; padding: 8px 20px; }
+      .logo img { height: 90px; }
+      #main-title { font-size: clamp(36px, 10vw, 60px); }
+      #main-description { font-size: 18px; max-width: 90%; }
+      .discover-button { font-size: 16px; padding: 10px 28px; }
+      #subtext { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ---------- EN-TÊTE ---------- -->
+  <header>
+    <div class="logo">
+      <img src="logoCF.png" alt="Logo CoFounder's" />
+    </div>
+    <div class="nav-right">
+      <div class="social-icons">
+        <div class="social-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="5" stroke="#0369a1" stroke-width="2" />
+            <circle cx="12" cy="12" r="4" stroke="#0369a1" stroke-width="2" />
+            <circle cx="18" cy="6" r="1.5" fill="#0369a1" />
+          </svg>
+        </div>
+        <div class="social-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="#0369a1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+      <button class="nav-button" id="contact-button">Nous contacter</button>
+      <button class="nav-button" id="login-button">Se connecter</button>
+      <button class="nav-button" id="signup-button">Créer un compte</button>
+    </div>
+  </header>
+
+  <!-- ---------- CONTENU PRINCIPAL PAGE 1 ---------- -->
+  <main>
+    <div class="shapes-container" id="shapes-container"></div>
+    <h1 id="main-title">Trouver vos futurs partenaires</h1>
+    <p id="main-description">
+      Avec CoFounder's, vous pourrez trouver vos futurs partenaires plus vite,
+      plus facilement, et lancer votre projet dans une multitude de domaines professionnels.
+    </p>
+    <button class="discover-button" id="discoverButton">Découvrir</button>
+    <p id="subtext">Connect your ideas, build your future</p>
+  </main>
+
+  <!-- ---------- SEPARATION POUR SCROLL ---------- -->
+  <div style="height: 100px;"></div>
+
+  <!-- ---------- PAGE 2 - RECHERCHE AVANCÉE ---------- -->
+  <section id="searchPage">
+    <!-- Fond géométrique animé -->
+    <div class="geometric-background">
+      <div class="geometric-shape rectangle shape-1" style="width: 60px; height: 60px;"></div>
+      <div class="geometric-shape triangle triangle-1 shape-2"></div>
+      <div class="geometric-shape rectangle shape-3" style="width: 40px; height: 80px;"></div>
+      <div class="geometric-shape triangle triangle-2 shape-4"></div>
+      <div class="geometric-shape rectangle shape-5" style="width: 50px; height: 50px;"></div>
+      <div class="geometric-shape triangle triangle-3 shape-6"></div>
+      <div class="geometric-shape rectangle shape-7" style="width: 70px; height: 45px;"></div>
+      <div class="geometric-shape triangle triangle-1 shape-8"></div>
+      <div class="geometric-shape rectangle shape-9" style="width: 35px; height: 70px;"></div>
+    </div>
+
+    <main class="container" style="background-color:#000;">
+      <h1 class="main-title" id="mainTitleSearch">Recherche Avancée</h1>
+      <div class="content-grid">
+        <!-- Section Profil -->
+        <div class="profile-card">
+          <div class="profile-header">
+            <div class="profile-avatar" id="profileAvatar">MD</div>
+            <div class="profile-name" id="profileName">Marie Dubois</div>
+            <div class="profile-profession" id="profileProfession">Développeuse Web</div>
+          </div>
+          <div class="profile-details">
+            <div class="detail-item"><span class="detail-icon">📧</span><span id="profileEmail">marie.dubois@email.com</span></div>
+            <div class="detail-item"><span class="detail-icon">📱</span><span>+33 6 12 34 56 78</span></div>
+            <div class="detail-item"><span class="detail-icon">📍</span><span>Paris, France</span></div>
+            <div class="detail-item"><span class="detail-icon">💼</span><span>5 ans d'expérience</span></div>
+            <div class="detail-item"><span class="detail-icon">🎓</span><span>Master Informatique</span></div>
+          </div>
+          <div class="tags"><span class="tag">JavaScript</span> <span class="tag">React</span> <span class="tag">Node.js</span> <span class="tag">CSS</span></div>
+          <div class="section-description">
+            Une recherche précise et structurée, permettant de trouver rapidement ce que vous cherchez sans ambiguïté.
+          </div>
+        </div>
+        <!-- Section Recherche -->
+        <div class="search-card">
+          <h2 class="search-title" id="searchTitle">Rechercher des profils</h2>
+          <form id="searchForm">
+            <div class="filter-group">
+              <label class="filter-label" for="profession">Profession</label>
+              <select class="filter-select" id="profession">
+                <option value="">Toutes les professions</option>
+                <option value="developpeur">Développeur</option>
+                <option value="designer">Designer</option>
+                <option value="marketing">Marketing</option>
+                <option value="commercial">Commercial</option>
+                <option value="rh">Ressources Humaines</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label class="filter-label" for="location">Lieu</label>
+              <select class="filter-select" id="location">
+                <option value="">Tous les lieux</option>
+                <option value="paris">Paris</option>
+                <option value="lyon">Lyon</option>
+                <option value="marseille">Marseille</option>
+                <option value="toulouse">Toulouse</option>
+                <option value="remote">Télétravail</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label class="filter-label" for="experience">Expérience</label>
+              <select class="filter-select" id="experience">
+                <option value="">Toute expérience</option>
+                <option value="junior">Junior (0-2 ans)</option>
+                <option value="intermediate">Intermédiaire (3-5 ans)</option>
+                <option value="senior">Senior (5+ ans)</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label class="filter-label" for="skills">Compétences</label>
+              <input type="text" class="filter-input" id="skills" placeholder="JavaScript, React, Python...">
+            </div>
+            <button type="submit" class="search-button">🔍 Lancer la recherche</button>
+          </form>
+          <div class="section-description">
+            Une recherche précise et structurée, permettant de trouver rapidement ce que vous cherchez sans ambiguïté.
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <!-- ---------- SCRIPT ---------- -->
+  <script>
+    // Messages temporaires
+    function showMessage(text){
+      const message = document.createElement('div');
+      message.textContent = text;
+      message.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#0369a1;color:white;padding:20px 40px;border-radius:10px;font-size:18px;z-index:1000;';
+      document.body.appendChild(message);
+      setTimeout(() => message.remove(), 2000);
+    }
+    document.getElementById('contact-button').addEventListener('click', () => showMessage('Formulaire de contact à venir !'));
+    document.getElementById('login-button').addEventListener('click', () => showMessage('Page de connexion à venir !'));
+    document.getElementById('signup-button').addEventListener('click', () => showMessage("Page d'inscription à venir !"));
+
+    // Scroll vers page 2
+    document.getElementById('discoverButton').addEventListener('click', () => {
+      document.getElementById('searchPage').scrollIntoView({behavior:'smooth'});
+    });
+
+    // Formes bleues page 1
+    const container = document.getElementById("shapes-container");
+    const shapes = ["circle","triangle","square"];
+    const colors = ["#60a5fa","#3b82f6","#1d4ed8"];
+    const numShapes = 85;
+    const speed = 1.2;
+    const allShapes = [];
+    for(let i=0;i<numShapes;i++){
+      const shape = document.createElement("div");
+      shape.classList.add("shape");
+      const type = shapes[Math.floor(Math.random()*shapes.length)];
+      const color = colors[Math.floor(Math.random()*colors.length)];
+      const size = Math.random()*40+20;
+      shape.style.width = `${size}px`;
+      shape.style.height = `${size}px`;
+      shape.style.background = type==="square"?color:"transparent";
+      shape.style.borderBottom = type==="triangle"?`${size}px solid ${color}`:"none";
+      shape.style.borderLeft = type==="triangle"?`${size/2}px solid transparent`:"none";
+      shape.style.borderRight = type==="triangle"?`${size/2}px solid transparent`:"none";
+      shape.style.borderRadius = type==="circle"?"50%":"0";
+      const top = Math.random()*90;
+      const left = Math.random()*100;
+      shape.style.top = `${top}%`;
+      shape.style.left = `${left}%`;
+      shape.style.opacity = 0.1+Math.random()*0.1;
+      container.appendChild(shape);
+      allShapes.push({el:shape,x:left,y:top,dx:(Math.random()-0.5)*speed,dy:(Math.random()-0.5)*speed});
+    }
+    function animateShapes(){
+      for(const s of allShapes){
+        s.x+=s.dx; s.y+=s.dy;
+        if(s.x<0||s.x>100) s.dx*=-1;
+        if(s.y<0||s.y>90) s.dy*=-1;
+        s.el.style.transform=`translate(${s.x-parseFloat(s.el.style.left)}%,${s.y-parseFloat(s.el.style.top)}%)`;
+      }
+      requestAnimationFrame(animateShapes);
+    }
+    animateShapes();
+  </script>
+</body>
+</html>
